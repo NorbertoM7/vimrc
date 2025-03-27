@@ -43,7 +43,7 @@ set showmatch
 set laststatus=2
 
 " Enable color scheme
-colorscheme desert
+" colorscheme desert
 
 " ===========================
 " Python-Specific Enhancements
@@ -69,6 +69,10 @@ let g:python3_host_prog = expand('~/.pyenv/versions/neovim/bin/python3')
 " Plug 'vim-python/python-syntax'  " Enhanced Python syntax
 " Plug 'vim-airline/vim-airline'    " Status bar enhancement
 " call plug#end()
-"
-"nnoremap <F1> :w<CR>:!reset && python3 "%" && if [ -f output.pdf ]; then explorer.exe output.pdf; fi<CR>
-nnoremap <F1> :w<CR>:!cd /mnt/c/Users/norbe/OneDrive/My\ Documents/Python/FDTD && python3 -m tests.test_grid && [ -f output.pdf ] && powershell.exe /c start output.pdf<CR>
+
+"nnoremap <F1> :!clear && python % && [-f output.pdf] && cmd.exe /c start output.pdf<CR>
+
+nnoremap <F1> :w<CR>:!clear && python3 "%"<CR>
+
+set termguicolors
+colorscheme chatgpt
